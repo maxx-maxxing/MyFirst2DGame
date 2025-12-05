@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c29e5e3702445bd91b1b6fd10d0ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 0
+  moveSpeed: 5
   rig: {fileID: 781880073}
 --- !u!70 &781880075
 CapsuleCollider2D:
