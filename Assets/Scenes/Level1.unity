@@ -1984,7 +1984,7 @@ Transform:
   m_GameObject: {fileID: 781880071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 0.39, z: 0}
+  m_LocalPosition: {x: -0.95, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2069,8 +2069,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.6437734}
-  m_Size: {x: 1.1413293, y: 1.3220288}
+  m_Offset: {x: 0.0043374896, y: 0.6220852}
+  m_Size: {x: 1.3755616, y: 1.3755616}
   m_Direction: 0
 --- !u!1 &1830464451
 GameObject:
@@ -2248,7 +2248,7 @@ Transform:
   m_GameObject: {fileID: 1956175409}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.645, z: 0}
+  m_LocalPosition: {x: 0, y: 0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2326,7 +2326,7 @@ Transform:
   m_GameObject: {fileID: 2143307886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94, y: 0.64, z: 0}
+  m_LocalPosition: {x: 5.46, y: 4.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2346,7 +2346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   moveSpeed: 2
-  moveOffset: {x: 0, y: 3, z: 0}
+  moveOffset: {x: 0, y: 4, z: 0}
 --- !u!58 &2143307889
 CircleCollider2D:
   m_ObjectHideFlags: 0

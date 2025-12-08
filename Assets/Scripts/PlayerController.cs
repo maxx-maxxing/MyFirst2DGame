@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,14 +32,25 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+
+        if (rig.transform.position.y < -5)
+        {
+            GameOver();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.GetContact(0).normal == Vector2.up)
+        Vector2 normal = collision.GetContact(0).normal;
+        if (normal.y > 0.5f)
         {
             isGrounded = true;
         }
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     
