@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -48,6 +49,13 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawLine(from, to);
         Gizmos.DrawWireSphere(to, 0.2f);
         Gizmos.DrawWireSphere(from, 0.2f);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerController>().GameOver();
+        }
     }
 }
 
