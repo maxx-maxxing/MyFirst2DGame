@@ -25,7 +25,6 @@ public class Coin : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().AddScore(scoreToGive);
-            Debug.Log($"Score: {collision.GetComponent<PlayerController>().score}");
             Destroy(gameObject);
             
         }

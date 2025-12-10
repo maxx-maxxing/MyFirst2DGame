@@ -12,6 +12,7 @@ public class EndFlag : MonoBehaviour
         {
             if (finalLevel == true)
             {
+                collision.GetComponent<PlayerController>().ResetScore();
                 SceneManager.LoadScene(0);
             }
             else

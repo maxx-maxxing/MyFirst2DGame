@@ -8,11 +8,16 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rig;
     public float jumpForce;
     public SpriteRenderer sr;
-    public int score;
+    public static int score;
     public TextMeshProUGUI scoreText;
     
     private bool isGrounded;
 
+    void Start ()
+    {
+        scoreText.text = "Score: " + score;
+    }
+    
     private void FixedUpdate()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
@@ -42,10 +47,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D (Collision2D collision)
     {
-        Vector2 normal = collision.GetContact(0).normal;
-        if (normal.y > 0.5f)
+        // OLD: if(collision.GetContact(0) == Vector2.up)
+        if(Vector2.Dot(collision.GetContact(0).normal, Vector2.up) > 0.8f)
         {
             isGrounded = true;
         }
@@ -53,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
+        ResetScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -60,6 +66,11 @@ public class PlayerController : MonoBehaviour
     {
         score += amount;
         scoreText.text = $"Score: {score}";
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
     }
 
     
